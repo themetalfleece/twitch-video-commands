@@ -1,0 +1,20 @@
+{
+  "name": "stream-chat-playback",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "themetalfleece",
+  "license": "MIT",
+  "scripts": {
+    "build": "node_modules/.bin/tsc",
+    "start": "node dist/src/app.js"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "@types/socket.io": "^2.1.4",
+    "@types/tmi.js": "^1.4.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0",
+    "tmi.js": "^1.5.0",
+    "typescript": "^3.8.2"
+  }
+}
