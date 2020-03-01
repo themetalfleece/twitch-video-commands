@@ -3,3 +3,12 @@ dist
 
 # node modules
 node_modules
+
+# environmental variables
+.env
+
+# commands configuration
+commands.ts
+
+# resources for the client
+src/public/resources

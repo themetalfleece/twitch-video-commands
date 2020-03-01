@@ -12,6 +12,7 @@
     "@types/express": "^4.17.2",
     "@types/socket.io": "^2.1.4",
     "@types/tmi.js": "^1.4.0",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "socket.io": "^2.3.0",
     "tmi.js": "^1.5.0",

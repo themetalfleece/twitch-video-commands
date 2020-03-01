@@ -1,8 +1,12 @@
 import { Client } from 'tmi.js';
-import { auth, commands, parameters, server as serverConfig } from '../config';
+import { commands, parameters } from '../commands';
 import * as express from 'express';
 import * as http from 'http';
 import * as socket from 'socket.io';
+import * as dotenv from 'dotenv';
+
+/** initiate environmental variables */
+dotenv.config();
 
 /* initiate the http and socker server */
 const app = express();
@@ -10,8 +14,8 @@ const server = new http.Server(app);
 const io = socket(server);
 
 /* listen to the given port */
-server.listen(serverConfig.port, () => {
-    console.log(`Listening on port ${serverConfig.port}`);
+server.listen(process.env.SERVER_PORT, () => {
+    console.log(`Listening on port ${process.env.SERVER_PORT}`);
 });
 
 /* serve the public directory as static files */
@@ -25,10 +29,10 @@ const client = Client({
         secure: true
     },
     identity: {
-        username: auth.username,
-        password: auth.password,
+        username: process.env.TWITCH_BOT_USERNAME,
+        password: process.env.TWITCH_BOT_PASSWORD,
     },
-    channels: auth.channels,
+    channels: JSON.parse(process.env.TWITCH_CHANNELS),
 });
 
 client.connect();
@@ -57,6 +61,7 @@ client.on('message', (channel, tags, message, self) => {
         if (messageLowerCase.startsWith(command.commandName)) {
             /* emit a 'play-video' event with the specified source and type */
             io.sockets.emit('play-video', { src: command.src, type: command.type });
+            console.log(`emited`, { src: command.src, type: command.type })
             cooldown.lastVideoPlayedAt = new Date();
         }
     }

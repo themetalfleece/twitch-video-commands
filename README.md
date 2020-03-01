@@ -7,11 +7,17 @@
 2) Set the server URL as the URL field
 3) (optional) Add a chroma key filter so the videos can have a transparent background
 
-### Project Configuration
-1) Edit `config.ts`
-2) Follow the comments to configure the server, authentication and the parameters of the application
+### Commands Configuration
+1) Copy `comamnds.example.ts` to `commands.ts` and edit it as follows:
+2) Follow the comments to configure the parameters of the application
 3) To setup the commands, add entries to the `commands` array, following the given interface
    * You should place your videos in the `/src/public/resources` directory
+
+### Server and authentication Configuration
+1) Copy `.env.example` to `.env` and edit as follows:
+2) Set up your twitch bot username, passwords and the server port
+   * Example: `TWITCH_BOT_PASSWORD="oauth:xxx"`
+   * Example: `TWITCH_CHANNELS="["#testchannel"]"`
 
 ### Building and Running the application
 1) Install [node.js](https://nodejs.org/en/download/), [yarn](https://classic.yarnpkg.com/en/docs/install)
