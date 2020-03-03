@@ -3,6 +3,8 @@ export const parameters = {
     videoCommands: {
         /** cooldown for the video commands */
         cooldown: 60,
+        /** notify that the given video commands can't be played due to the cooldown */
+        notifyAboutCooldown: true,
         /** the video commands to use */
         commands: [
             {
