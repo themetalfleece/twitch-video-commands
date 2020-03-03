@@ -2,7 +2,7 @@ export const parameters = {
     /** in seconds, a cooldown for playing videos */
     videoCommands: {
         /** cooldown for the video commands */
-        cooldown: 10,
+        cooldown: 60,
         /** the video commands to use */
         commands: [
             {
@@ -17,7 +17,7 @@ export const parameters = {
     },
     subscriberOnly: {
         /** whether only subscribers can trigger the videos */
-        enabled: true,
+        enabled: false,
         /** notify a that it's in sub-only mode if a non-sub send a video command */
         notifyAboutSubOnly: true,
         /** cooldown for notifyAboutSubOnly */

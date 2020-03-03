@@ -8,9 +8,9 @@
 3) (optional) Add a chroma key filter so the videos can have a transparent background
 
 ### Commands Configuration
-1) Copy `comamnds.example.ts` to `commands.ts` and edit it as follows:
+1) Copy `parameters.example.ts` to `parameters.ts` and edit it as follows:
 2) Follow the comments to configure the `parameters` of the application
-3) To setup the commands, add entries to the `commands` array, following the given interface
+3) To setup the video commands, add entries to the `commands` array, following the example
    * You should place your videos in the `/src/public/resources` directory
 
 ### Server and authentication Configuration
