@@ -9,7 +9,7 @@
 
 ### Commands Configuration
 1) Copy `comamnds.example.ts` to `commands.ts` and edit it as follows:
-2) Follow the comments to configure the parameters of the application
+2) Follow the comments to configure the `parameters` of the application
 3) To setup the commands, add entries to the `commands` array, following the given interface
    * You should place your videos in the `/src/public/resources` directory
 
@@ -24,7 +24,9 @@
 2) Run `yarn` to install the project dependencies
 3) To build the app, navigate to the project root and run `yarn build`
 4) To run the app, navigate to the project root and run `yarn start`
-5) The server will run on the port specified
+5) In development, you can combine both of the above steps by running `yarn dev`. This will also auro-reload the app on any change
+   * For this to run, you need to run once `yarn global add nodemon ts-node`
+6) The server will run on the port specified
 
 ### Project structure
 1) `src/app.ts`: the server, which runs with `node`

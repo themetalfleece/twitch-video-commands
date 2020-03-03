@@ -45,7 +45,10 @@ const cooldown: {
 }
 
 client.on('message', (channel, tags, message, self) => {
-    if (self) return;
+    if (self) { return; }
+
+    // for subscriber-only mode
+    if (parameters.subscriberOnly && !tags.subscriber) { return; }
 
     /** if the cooldown is reached, return right away */
     if (

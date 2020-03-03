@@ -1,6 +1,8 @@
 export const parameters = {
     /** in seconds, a cooldown for playing videos */
     cooldown: 60,
+    /** whether only subscribers can trigger the videos */
+    subscriberOnly: false,
 };
 
 export const commands: Array<{
