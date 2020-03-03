@@ -7,8 +7,8 @@ node_modules
 # environmental variables
 .env
 
-# commands configuration
-commands.ts
+# parameters configuration
+parameters.ts
 
 # resources for the client
 src/public/resources
