@@ -1,6 +1,9 @@
 # twitch-video-commands
 
 ## Plays a video on stream whenever a command is sent on twitch chat
+Supports cooldown, has a command to show all available video commands and more
+
+![](https://i.imgur.com/rGmTtkn.gif)
 
 ### Setup in OBS (when you have the server URL)
 1) Add a new Browser Source
